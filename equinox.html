@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQUINOX | Karim Haciane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="equinox.css">
+</head>
+<body>
+    <div class="brand-bg"></div>
+    
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-right"></i>
+        <span>رجوع</span>
+    </a>
+
+    <!-- Brand Hero -->
+    <section class="brand-hero">
+        <div class="hero-content">
+            <div class="brand-logo">
+                <h1>EQUINOX</h1>
+            </div>
+            <p class="brand-tagline">
+                حملة UGC متكاملة مع محتوى إبداعي و أصيل يعكس روح البراند
+            </p>
+            <div class="brand-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Client</span>
+                    <span class="meta-value">EQUINOX</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">Service</span>
+                    <span class="meta-value">UGC Content</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">Year</span>
+                    <span class="meta-value">2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-player">
+                <video id="mainVideo" poster="images/equinox/video-poster.jpg">
+                    <source src="videos/equinox-demo.mp4" type="video/mp4">
+                </video>
+                <div class="video-controls">
+                    <button class="play-btn" id="playBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span>/</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <button class="volume-btn" id="volumeBtn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button class="fullscreen-btn" id="fullscreenBtn">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <h2>نظرة عامة على المشروع</h2>
+                    <p>
+                        عملنا مع EQUINOX على حملة UGC شاملة تهدف لإنشاء محتوى أصيل يعكس قيم البراند و يتفاعل مع الجمهور المستهدف. الحملة ركزت على إنشاء محتوى فيديو عالي الجودة يظهر المنتجات في سياقات حياة يومية واقعية.
+                    </p>
+                    <p>
+                        استخدمنا استراتيجية محتوى متكاملة تجمع بين الجانب التعليمي و الترفيهي، مع التركيز على storytelling قوي يجعل المشاهد يتفاعل مع البراند بشكل طبيعي.
+                    </p>
+                </div>
+                <div class="overview-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-text">فيديو UGC</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2.5M</div>
+                        <div class="stat-text">مشاهدة</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8.5%</div>
+                        <div class="stat-text">Engagement Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">320K</div>
+                        <div class="stat-text">وصول</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="gallery-title">معرض الأعمال</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <img src="images/equinox/gallery-1.jpg" alt="EQUINOX Content 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item large" data-index="1">
+                    <img src="images/equinox/gallery-2.jpg" alt="EQUINOX Content 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-index="2">
+                    <img src="images/equinox/gallery-3.jpg" alt="EQUINOX Content 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-index="3">
+                    <img src="images/equinox/gallery-4.jpg" alt="EQUINOX Content 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item large" data-index="4">
+                    <img src="images/equinox/gallery-5.jpg" alt="EQUINOX Content 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-index="5">
+                    <img src="images/equinox/gallery-6.jpg" alt="EQUINOX Content 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results">
+        <div class="container">
+            <h2 class="results-title">النتائج و التأثير</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>زيادة في المبيعات</h3>
+                    <p>تحقيق زيادة بنسبة 45% في المبيعات خلال فترة الحملة</p>
+                </div>
+                <div class="result-card">
+                    <i class="fas fa-users"></i>
+                    <h3>نمو الجمهور</h3>
+                    <p>زيادة المتابعين بنسبة 60% عبر منصات التواصل الاجتماعي</p>
+                </div>
+                <div class="result-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>تفاعل عالي</h3>
+                    <p>معدل تفاعل 8.5% وهو أعلى من متوسط الصناعة بـ 3 مرات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <script>
+        // Video Player
+        const video = document.getElementById('mainVideo');
+        const playBtn = document.getElementById('playBtn');
+        const progressBar = document.getElementById('progressBar');
+        const currentTime = document.getElementById('currentTime');
+        const duration = document.getElementById('duration');
+        const volumeBtn = document.getElementById('volumeBtn');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        playBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                video.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+
+        video.addEventListener('timeupdate', () => {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = progress + '%';
+            currentTime.textContent = formatTime(video.currentTime);
+        });
+
+        video.addEventListener('loadedmetadata', () => {
+            duration.textContent = formatTime(video.duration);
+        });
+
+        volumeBtn.addEventListener('click', () => {
+            video.muted = !video.muted;
+            volumeBtn.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+        });
+
+        fullscreenBtn.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            }
+        });
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        let currentIndex = 0;
+        const images = Array.from(galleryItems).map(item => item.querySelector('img').src);
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox();
+            });
+        });
+
+        function openLightbox() {
+            lightbox.classList.add('active');
+            updateLightbox();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateLightbox() {
+            lightboxImg.src = images[currentIndex];
+            lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        lightboxPrev.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateLightbox();
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lightboxNext.click();
+            if (e.key === 'ArrowRight') lightboxPrev.click();
+        });
+    </script>
+</body>
+</html>
