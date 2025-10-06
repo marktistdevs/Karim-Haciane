@@ -591,6 +591,33 @@ button {
     font-size: 0.9rem;
 }
 
+/* Special note style inside package features */
+.package-features li span {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+.package-features li.note span {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+.package-features li.note i {
+    color: #7aa2ff; /* info tint */
+}
+
+/* Visible service note under service-terms */
+.service-note {
+    color: var(--text-primary);
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+
+
 /* Render feature text LTR so leading digits (e.g. 7, 1) appear on the left in RTL pages */
 .package-features li span {
     direction: ltr;
