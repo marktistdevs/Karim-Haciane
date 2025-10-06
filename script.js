@@ -315,3 +315,6 @@ document.querySelectorAll('img').forEach(img => {
 });
 
 console.log('Portfolio loaded successfully ✓');
+
+// ============================================
+// (removed package-note toggle — package notes are now permanent list items)
