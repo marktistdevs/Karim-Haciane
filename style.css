@@ -210,16 +210,16 @@ button {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
     color: var(--text-primary);
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     transition: transform 0.15s ease, background 0.15s ease;
     font-size: 1.05rem;
 }
 
 .btn-social:hover {
     transform: translateY(-3px);
-    background: rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .hero-description {
@@ -280,8 +280,17 @@ button {
 }
 
 @keyframes scroll {
-    0%, 100% { opacity: 0; transform: translateY(0); }
-    50% { opacity: 1; transform: translateY(20px); }
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
 }
 
 /* ============================================
@@ -596,18 +605,21 @@ button {
     direction: ltr;
     unicode-bidi: embed;
 }
+
 .package-features li.note span {
     color: var(--text-secondary);
     font-size: 0.92rem;
 }
+
 .package-features li.note i {
-    color: #7aa2ff; /* info tint */
+    color: #7aa2ff;
+    /* info tint */
 }
 
 /* Visible service note under service-terms */
 .service-note {
     color: var(--text-primary);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
     padding: 1rem;
     border-radius: 12px;
@@ -792,10 +804,10 @@ button {
     pointer-events: none;
 }
 
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label,
-.form-group input:focus + label,
-.form-group textarea:focus + label {
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:not(:placeholder-shown)+label,
+.form-group input:focus+label,
+.form-group textarea:focus+label {
     top: -0.75rem;
     right: 1rem;
     font-size: 0.8rem;
@@ -804,7 +816,7 @@ button {
     color: var(--accent);
 }
 
-.form-group select + label {
+.form-group select+label {
     top: -0.75rem;
     right: 1rem;
     font-size: 0.8rem;
@@ -842,11 +854,13 @@ button {
 
 .footer-marktist {
     display: flex;
-    flex-direction: column; /* stack logo above text */
+    flex-direction: column;
+    /* stack logo above text */
     align-items: center;
     gap: 0.35rem;
     position: relative;
-    justify-content: center; /* center horizontally inside footer-bottom */
+    justify-content: center;
+    /* center horizontally inside footer-bottom */
     text-align: center;
 }
 
@@ -882,10 +896,12 @@ button {
     .footer-container {
         padding: 2rem;
     }
+
     .footer-marktist img {
         width: 40px;
         height: 40px;
     }
+
     .footer-version {
         display: none;
     }
@@ -930,6 +946,7 @@ button {
    Responsive Design
    ============================================ */
 @media (max-width: 1024px) {
+
     .nav-container,
     .hero-container,
     .section-container,
@@ -1027,6 +1044,7 @@ button {
 }
 
 @media (max-width: 480px) {
+
     .nav-container,
     .hero-container,
     .section-container,
@@ -1045,5 +1063,280 @@ button {
 
     .contact-form {
         padding: 2rem 1.5rem;
+    }
+}
+
+/* ============================================
+   Suspension Popup Styles
+   ============================================ */
+.suspended-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: none;
+    /* Controlled by JS */
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.suspended-modal {
+    background: #151515;
+    width: 92%;
+    max-width: 400px;
+    max-height: 85vh;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 50, 50, 0.4);
+    position: relative;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.15);
+    animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.suspended-body {
+    padding: 3rem 1.5rem 2rem;
+    overflow-y: auto;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.suspended-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.suspended-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.btn-lang {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.lang-fr .btn-lang {
+    left: auto;
+    right: 0.75rem;
+}
+
+.btn-lang:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.btn-close-popup {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.lang-fr .btn-close-popup {
+    right: auto;
+    left: 0.75rem;
+}
+
+.btn-close-popup:hover {
+    background: rgba(255, 50, 50, 0.2);
+    color: #ff4444;
+    border-color: #ff4444;
+}
+
+.suspended-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.warning-icon {
+    font-size: 2.2rem;
+    color: #ff4444;
+    margin-bottom: 0.5rem;
+    animation: pulseRed 2s infinite;
+}
+
+.suspended-header h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.suspended-main-msg {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+}
+
+.suspended-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.info-card i {
+    font-size: 1.1rem;
+    color: #ff4444;
+    margin-bottom: 0.5rem;
+}
+
+.info-card h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.info-card p {
+    font-size: 0.75rem;
+    color: #999999;
+    line-height: 1.4;
+}
+
+.reasons-box {
+    background: rgba(255, 68, 68, 0.08);
+    border: 1px solid rgba(255, 68, 68, 0.2);
+    padding: 1.25rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.reasons-box h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    color: #ff6666;
+    font-weight: 800;
+}
+
+.reasons-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reasons-box ul li {
+    font-size: 0.8rem;
+    color: #ffaaaa;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reasons-box ul li::before {
+    content: '→';
+    color: #ff4444;
+    font-weight: 900;
+}
+
+.suspended-footer {
+    text-align: center;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.suspended-footer p {
+    font-size: 0.75rem;
+    color: #888888;
+    line-height: 1.5;
+}
+
+/* RTL/LTR Logic */
+.lang-fr .suspended-modal {
+    direction: ltr;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulseRed {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(255, 0, 0, 0));
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(255, 0, 0, 0));
+    }
+}
+
+@media (min-width: 768px) {
+    .suspended-modal {
+        max-width: 420px;
+    }
+
+    .suspended-body {
+        padding: 3.5rem 2.5rem 2.5rem;
     }
 }
